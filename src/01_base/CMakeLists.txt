@@ -13,13 +13,14 @@ set(EXECUTABLE_OUTPUT_PATH ${OUTPUT_PATH_HOME}/bin)
 
 #set(TEST_01_ADD_SRC main.cpp;add.cpp)
 # 递归搜索src目录下所有.cpp文件
-file(GLOB_RECURSE TEST_01_ADD_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+file(GLOB TEST_01_ADD_SRC "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 message(STATUS "源文件: ${TEST_01_ADD_SRC}")
 
 # add the executable #{var}取值变量
 add_executable(test_01_add ${TEST_01_ADD_SRC})
 
 #头文件目录
+#include_directories
 target_include_directories(test_01_add PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 
