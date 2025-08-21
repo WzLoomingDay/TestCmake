@@ -1,6 +1,6 @@
 #ifndef CAL_MATH_H
 #define CAL_MATH_H
-//calculation algorithm
+// calculation algorithm
 namespace cal {
     int add(int a, int b);
     int minus(int a, int b);
