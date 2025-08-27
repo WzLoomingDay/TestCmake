@@ -35,6 +35,7 @@ add_executable(test_02_lib)
 target_sources(test_02_lib PUBLIC main.cpp)
 
 target_link_directories(test_02_lib PUBLIC  ${OUTPUT_LIB_DIRECTORY})
+#如果已经存在库文件一般用 find_library 拿到文件
 set(CAL_MATH_LIB_PATH ${OUTPUT_LIB_DIRECTORY}/libcal_math.a)
 target_link_libraries(test_02_lib ${CAL_MATH_LIB_PATH})
 
